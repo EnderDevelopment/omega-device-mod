@@ -1,0 +1,24 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Omega Device Mod Behavior Pack",
+    "name": "Omega Device Mod",
+    "uuid": "a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "description": "Omega Device Mod Behavior",
+      "type": "data",
+      "uuid": "b1c2d3e4-f5g6-7890-h1i2-j3k4l5m6n7o8",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "c1d2e3f4-g5h6-7890-i1j2-k3l4m5n6o7p8",
+      "version": [1, 0, 0]
+    }
+  ]
+}

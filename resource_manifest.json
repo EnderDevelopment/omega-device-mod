@@ -1,0 +1,24 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Omega Device Mod Resource Pack",
+    "name": "Omega Device Mod Resources",
+    "uuid": "d1e2f3g4-h5i6-7890-j1k2-l3m4n5o6p7q8",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "description": "Omega Device Mod Resources",
+      "type": "resources",
+      "uuid": "e1f2g3h4-i5j6-7890-k1l2-m3n4o5p6q7r8",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "f1g2h3i4-j5k6-7890-l1m2-n3o4p5q6r7s8",
+      "version": [1, 0, 0]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.19.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "omega_device:omega_device",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": "omega_device",
+      "minecraft:display_name": "Omega Device",
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0,
+      "minecraft:hand_equipped": true,
+      "minecraft:allow_off_hand": true,
+      "minecraft:cooldown": 10,
+      "minecraft:on_use": {
+        "event": "omega_device:use"
+      }
+    }
+  }
+}

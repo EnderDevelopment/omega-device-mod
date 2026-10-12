@@ -1,0 +1,2 @@
+item.omega_device:omega_device.name=Omega Device
+item.omega_device:omega_device.description=An advanced device inspired by Rick and Morty

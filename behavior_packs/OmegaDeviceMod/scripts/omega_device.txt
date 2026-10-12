@@ -1,0 +1,69 @@
+// Omega Device Mod Script
+
+// Function to remove nearby entities and items
+function clearArea(player) {
+    const entities = player.dimension.getEntities({
+        location: player.location,
+        maxDistance: 10,
+        type: "!player"
+    });
+    
+    entities.forEach(entity => {
+        entity.remove();
+    });
+    
+    const items = player.dimension.getEntities({
+        location: player.location,
+        maxDistance: 10,
+        type: "item"
+    });
+    
+    items.forEach(item => {
+        item.remove();
+    });
+}
+
+// Function to clear blocks in front of the player
+function clearBlocks(player) {
+    const direction = player.getViewDirection();
+    const blockLocation = player.location.offset(
+        direction.x * 5,
+        direction.y * 5,
+        direction.z * 5
+    );
+    
+    for (let x = -2; x <= 2; x++) {
+        for (let y = -2; y <= 2; y++) {
+            for (let z = -2; z <= 2; z++) {
+                const block = player.dimension.getBlock({
+                    x: blockLocation.x + x,
+                    y: blockLocation.y + y,
+                    z: blockLocation.z + z
+                });
+                
+                if (block.id !== "minecraft:air") {
+                    block.setType("minecraft:air");
+                }
+            }
+        }
+    }
+}
+
+// Function to put a player in spectator mode
+function eliminatePlayer(player) {
+    player.runCommand("gamemode spectator @s");
+}
+
+// Main function to handle item use
+function useOmegaDevice(player) {
+    clearArea(player);
+    clearBlocks(player);
+    eliminatePlayer(player);
+}
+
+// Register the event handler
+world.events.itemUse.subscribe(event => {
+    if (event.item.id === "omega_device:omega_device") {
+        useOmegaDevice(event.source);
+    }
+});
